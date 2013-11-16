@@ -15,11 +15,11 @@ public class Other {
 		LocalDate firstOfMonth = today.with(TemporalAdjusters.firstDayOfMonth());
 		System.out.println(firstOfMonth);
 		
-		//many additions to collections as a result of Mixins and Lambas
+		//many additions to collections as a result of Mixins and Lambdas
 		
 		List<Integer> list = Arrays.asList(3,1,6,2);
 		//sort is now an instance method and can be overriden
-		//this allows huge performance gains e.g. for array lists
+		//this allows big performance gains e.g. for array lists
 		list.sort(Comparator.naturalOrder());
 		System.out.println(list);
 		
@@ -32,7 +32,6 @@ public class Other {
 		new LongAccumulator(Long::sum, 0);
 		
 		//lots of APIs where improved to work with Lambdas
-		//again, this does not compile yet because Java 8 support is still in Beta
 		Comparator<Person> comp = Comparator.comparing(Person::firstName)
 				.thenComparing(Person::lastName);
 		
